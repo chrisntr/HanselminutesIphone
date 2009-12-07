@@ -8,9 +8,9 @@
     <ProjectGuid>{D5358ED6-B5BC-4540-B95C-EFB8641844FB}</ProjectGuid>
     <ProjectTypeGuids>{E613F3A2-FE9C-494F-B74E-F63BCB86FEA6};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestReachability</RootNamespace>
+    <RootNamespace>Hanselminutes</RootNamespace>
     <MainNibFile>MainWindow.xib</MainNibFile>
-    <AssemblyName>TestReachability</AssemblyName>
+    <AssemblyName>Hanselminutes</AssemblyName>
     <MtouchSdkVersion>3.0</MtouchSdkVersion>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
