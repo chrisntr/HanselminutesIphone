@@ -16,8 +16,11 @@ namespace Hanselminutes {
 	public partial class HomeViewController {
 		
 		#pragma warning disable 0169
-		[MonoTouch.Foundation.Export("buttonPressed:")]
-		partial void buttonPressed (MonoTouch.UIKit.UIButton sender);
+		[MonoTouch.Foundation.Export("DisplayButtonPressed:")]
+		partial void DisplayButtonPressed (MonoTouch.UIKit.UIButton sender);
+
+		[MonoTouch.Foundation.Export("PlayButtonPressed:")]
+		partial void PlayButtonPressed (MonoTouch.UIKit.UIButton sender);
 
 		[MonoTouch.Foundation.Connect("view")]
 		private MonoTouch.UIKit.UIView view {
@@ -56,6 +59,46 @@ namespace Hanselminutes {
 			}
 			set {
 				this.SetNativeField("modalButton", value);
+			}
+		}
+		
+		[MonoTouch.Foundation.Connect("slider")]
+		private MonoTouch.UIKit.UISlider slider {
+			get {
+				return ((MonoTouch.UIKit.UISlider)(this.GetNativeField("slider")));
+			}
+			set {
+				this.SetNativeField("slider", value);
+			}
+		}
+		
+		[MonoTouch.Foundation.Connect("totalTime")]
+		private MonoTouch.UIKit.UILabel totalTime {
+			get {
+				return ((MonoTouch.UIKit.UILabel)(this.GetNativeField("totalTime")));
+			}
+			set {
+				this.SetNativeField("totalTime", value);
+			}
+		}
+		
+		[MonoTouch.Foundation.Connect("currentTime")]
+		private MonoTouch.UIKit.UILabel currentTime {
+			get {
+				return ((MonoTouch.UIKit.UILabel)(this.GetNativeField("currentTime")));
+			}
+			set {
+				this.SetNativeField("currentTime", value);
+			}
+		}
+		
+		[MonoTouch.Foundation.Connect("displayButton")]
+		private MonoTouch.UIKit.UIButton displayButton {
+			get {
+				return ((MonoTouch.UIKit.UIButton)(this.GetNativeField("displayButton")));
+			}
+			set {
+				this.SetNativeField("displayButton", value);
 			}
 		}
 	}

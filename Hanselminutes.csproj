@@ -13,6 +13,8 @@
     <AssemblyName>Hanselminutes</AssemblyName>
     <MtouchSdkVersion>3.0</MtouchSdkVersion>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <BundleDisplayName>Hanselminutes</BundleDisplayName>
+    <BundleIcon>Icon.png</BundleIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,10 +65,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="monotouch, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>monotouch.dll</HintPath>
-    </Reference>
+    <Reference Include="monotouch" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindow.xib.designer.cs">
@@ -81,10 +80,18 @@
       <DependentUpon>HomeViewController.xib</DependentUpon>
     </Compile>
     <Compile Include="Podcast.cs" />
+    <Compile Include="PlayerViewController.xib.cs">
+      <DependentUpon>PlayerViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerViewController.xib.designer.cs">
+      <DependentUpon>PlayerViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="UILoadingView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xib" />
     <Page Include="HomeViewController.xib" />
+    <Page Include="PlayerViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -92,4 +99,9 @@
       <Properties InternalTargetFrameworkVersion="IPhone" />
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Content Include="Default.png" />
+    <Content Include="Background.png" />
+    <Content Include="Icon.png" />
+  </ItemGroup>
 </Project>
